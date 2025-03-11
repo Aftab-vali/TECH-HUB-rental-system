@@ -1,0 +1,1 @@
+[{"user": "priya", "cart": [{"category": "camera", "name": "Nikon", "price": 700.0}, {"category": "projectors", "name": "ipson Projector", "price": 800.0}], "date": "2025-03-08 10:05:25", "status": "Granted"}, {"user": "aftab", "cart": [{"category": "test", "name": "item1", "price": 300.0}], "date": "2025-03-08 15:52:53", "status": "Granted"}]

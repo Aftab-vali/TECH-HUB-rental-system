@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Status</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('/static/images/bg.jpg'); /* Replace with actual background image path */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #f5f5f5; /* Fallback color */
+        }
+        h1 {
+            margin-top: 50px;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Booking Status</h1>
+
+    {% if status == "Granted" %}
+        <p>Congratulations! Your booking has been <b>Granted</b>.</p>
+        <h2>Total Rent Per Day: ₹{{ total }}</h2>
+        <p>Thank you for choosing our service!</p>
+    {% elif status == "Pending" %}
+        <p>Your booking is currently <b>Pending</b>.</p>
+        <p>Please wait for the admin to review your booking.</p>
+    {% elif status == "Canceled" %}
+        <p>Your booking has been <b>Canceled</b>.</p>
+        <h2>Total Rent Per Day: ₹0</h2>
+        <p>You can create a new booking at any time.</p>
+    {% endif %}
+
+    <a href="/user" class="button">Back to Home</a>
+</body>
+
+
+<footer>
+    <h2>For more details contact: </h2>
+    <p>7975470974, 8951318003</p>
+    <p>ab895055@gmail.com</p>
+    <p>techhubrent12@gmail.com</p>
+</footer>
+</html>

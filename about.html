@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tech Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            position: relative;
+            padding: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+            text-align: center;
+        }
+        .button {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .left, .right {
+            flex: 1 1 45%; /* Ensure both sections take up about half the space */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .left img {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+        .right {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: slideInRight 1.5s ease-out;
+        }
+        .right h2 {
+            color: #333;
+        }
+        .right p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .rent{
+            color: blue;
+            font-size: 30px;
+
+            font-family: cursive;
+
+        }
+        .contact {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .contact a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Tech-HUB </h1>
+        <a href="/index" class="button">Book Now</a>
+    </div>
+    <marquee class="rent">
+        Rent Smarter learn better - "OFFER CLOSSES SOON📢📢"
+    </marquee>
+    <div class="container">
+        <!-- Left Section with Images -->
+        <div class="left">
+            <img src="\static\images\mike.png" alt="Microphone">
+            <img src="\static\images\OIP.jpg" alt="Laptop">
+            <img src="\static\images\camera1.jpg" alt="Camera 1">
+            <img src="\static\images\laptop (3).jpg" alt="Camera 2">
+        </div>
+        <!-- Right Section with Text -->
+        <div class="right">
+            <h2>We provide a seamless and efficient technology rental platform that offers high-quality electronic equipment for events, meetings, and workshops.</h2>
+
+            <p>Whether you need laptops, speakers, microphones, projectors, or printers, we ensure a hassle-free booking experience with reliable service.</p>
+            <p>In today's fast-paced, dynamic world, technology is no longer a luxury; it's a necessity. From impactful presentations to collaborative workshops and unforgettable events, the right technological tools can make all the difference. Yet, acquiring and maintaining cutting-edge electronic equipment can be a significant financial burden and logistical challenge for businesses, event organizers, and individuals alike.</p>
+            <p>This is where Tech Hub was born. We recognized a pressing need: a reliable, accessible, and cost-effective solution for technology rentals. We envisioned a platform that would empower our customers to access the latest equipment without the constraints of ownership, allowing them to focus on what truly matters – achieving their goals.</p>
+            <p>Tech Hub isn't just a rental service; it's a bridge connecting you to the technology you need, when you need it. We've meticulously crafted a seamless and efficient platform, designed to simplify the entire rental process. From browsing our extensive inventory to placing your order and receiving expert support, we're committed to providing a hassle-free experience.</p>
+            <h2>Our Core Values:</h2>
+            <p><strong>Accessibility:</strong> We believe technology should be within reach for everyone, regardless of budget or technical expertise.</p>
+            <p><strong>Reliability:</strong> We provide only high-quality, meticulously maintained equipment, ensuring consistent performance and peace of mind.</p>
+            <p><strong>Efficiency:</strong> We streamline the rental process, saving you time and effort so you can focus on your core objectives.</p>
+            <p><strong>Customer-Centricity:</strong> We prioritize your satisfaction, offering personalized support and flexible solutions to meet your unique needs.</p>
+            <p><strong>Innovation:</strong> We continuously strive to improve our platform and expand our inventory, staying ahead of the curve in the ever-evolving tech landscape.</p>
+            <h2>Our Product Categories Include:</h2>
+            <p><strong>Laptops & Computers:</strong> From powerful workstations for demanding tasks to sleek laptops for presentations and conferences, we offer a range of options to suit your computing needs.</p>
+            <p><strong>Audio Equipment:</strong> Elevate your events with crystal-clear sound. Our inventory includes speakers, microphones, mixers, and audio systems for any venue size.</p>
+            <p><strong>Visual Solutions:</strong> Make a lasting impression with our high-definition projectors, screens, and displays, perfect for presentations, workshops, and entertainment events.</p>
+            <p><strong>Printing & Scanning:</strong> Ensure seamless document management with our reliable printers, scanners, and multifunction devices.</p>
+            <p><strong>Networking & Connectivity:</strong> Stay connected with our robust networking solutions, including routers, Wi-Fi extenders, and mobile hotspots.</p>
+            <p><strong>Event Technology Packages:</strong> Simplify your event planning with our curated technology packages, designed to meet the specific needs of conferences, workshops, and trade shows.</p>
+            <p><strong>Specialty Items:</strong> We continually expand our inventory to include emerging technologies and specialized equipment, catering to diverse industries and applications</p>
+            <h2><strong>Join the Tech Hub Community:</strong></h2>
+            <p>We invite you to experience the Tech Hub difference. Browse our inventory, place your order, and discover how we can help you elevate your events and workflows with seamless technology rentals. Let us be your trusted partner in technology, empowering you to achieve more.</p>
+            <details>
+                <summary>
+                Our Mission
+                    </summary>
+                <p>"Bringing technology to your fingertips - Rent smarter, work better."</p>
+            <p>At Tech Hub, we simplify technology rentals with a platform that is convenient, affordable, and accessible to everyone. Our mission is to revolutionize the way you manage and book electronic resources for business and professional needs.</p>
+
+            </details>
+
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div class="contact">
+        <p>Contact Us:</p>
+        <a href="https://wa.me/your-number">WhatsApp</a> |
+        <a href="mailto:your-email@example.com">Email</a> |
+        <a href="https://your-website.com">Visit Our Website</a>
+    </div>
+</body>
+</html>

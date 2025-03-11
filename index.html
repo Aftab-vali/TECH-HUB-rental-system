@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Hub Management</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+        }
+
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 400px;
+            text-align: center;
+        }
+
+        .login-section {
+            margin-bottom: 20px;
+        }
+
+        .admin-login, .user-login {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #74ebd5;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #57c9aa;
+        }
+
+        .register-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #acb6e5;
+        }
+
+        .register-btn:hover {
+            background: #8a9ad6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Tech Hub Management</h1>
+        <a href="/register" class="register-btn">Register</a>
+        <div class="login-section">
+            <div class="admin-login">
+                <h2>Admin Login</h2>
+                <form action="/admin" method="POST">
+                    <input type="text" name="username" placeholder="User Name" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="user-login">
+                <h2>User Login</h2>
+                <form action="/user" method="POST">
+                    <input type="text" name="username" placeholder="User Name" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/images/bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #000000;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        li {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        form {
+            display: inline;
+        }
+        .confirm-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #28a745;
+        }
+        .page-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1>WELCOME, {{ username }}!</h1>
+        <h2>Available Categories</h2>
+        <ul>
+            {% for category, items in portfolio.items() %}
+                <li><b>{{ category }}</b>
+                    <ul>
+                        {% for item in items %}
+                            <li>
+                                {{ item.name }} - ₹{{ item.price_per_day }} per day
+                                <form action="/user/cart" method="POST" style="display:inline;">
+                                    <input type="hidden" name="username" value="{{ username }}">
+                                    <input type="hidden" name="category" value="{{ category }}">
+                                    <input type="hidden" name="name" value="{{ item.name }}">
+                                    <input type="hidden" name="price" value="{{ item.price_per_day }}">
+                                    <button type="submit" name="action" value="add">ADD</button>
+                                </form>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+        <form action="/user/confirm" method="POST">
+            <input type="hidden" name="username" value="{{ username }}">
+            <button class="confirm-button" type="submit">CONFIRM BOOKING</button>
+        </form>
+    </div>
+</body>
+</html>

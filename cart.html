@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Your Cart</h1>
+
+    {% if booking %}
+        <h2>Status: {{ booking.status }}</h2>
+        <p>Date of Issue: {{ booking.date }}</p>
+        <h3>Items in Cart:</h3>
+        <ul>
+            {% for item in booking.cart %}
+            <li>{{ item.name }} ({{ item.category }}) - ₹{{ item.price }} per day</li>
+            {% endfor %}
+        </ul>
+        {% if booking.status == "Pending" %}
+        <form action="/user/confirm" method="POST">
+            <input type="hidden" name="username" value="{{ booking.user }}">
+            <button type="submit">Confirm Booking</button>
+        </form>
+        {% endif %}
+    {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+
+    <a href="/user?username={{ booking.user }}">Back to Dashboard</a>
+</body>
+</html>
